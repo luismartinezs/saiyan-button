@@ -11,6 +11,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-wrap: nowrap;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .saiyan-button:active {
@@ -59,4 +62,27 @@
 .saiyan-button.super-saiyan-3:hover {
   background-color: #ffdf00;
   box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.9);
+}
+
+.saiyan-button.super-saiyan-god {
+  background-color: #ff0000;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.7);
+}
+
+.saiyan-button.super-saiyan-god:hover {
+  background-color: #ff3333;
+  box-shadow: 0 0 35px rgba(255, 0, 0, 1), 0 0 70px rgba(255, 0, 0, 0.9);
+}
+
+
+.saiyan-button.super-saiyan-blue {
+  background-color: #1e90ff;
+  color: #fff;
+  box-shadow: 0 0 35px rgba(30, 144, 255, 1), 0 0 70px rgba(30, 144, 255, 0.7);
+}
+
+.saiyan-button.super-saiyan-blue:hover {
+  background-color: #4169e1;
+  box-shadow: 0 0 40px rgba(30, 144, 255, 1), 0 0 80px rgba(30, 144, 255, 0.9);
 }
