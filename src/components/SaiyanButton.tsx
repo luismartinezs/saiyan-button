@@ -10,8 +10,18 @@ const forms = {
   },
   superSaiyan1: {
     class: styles["super-saiyan-1"],
-    label: "Super Saiyan 1",
+    label: "Super Saiyan",
     decreaseRate: 2
+  },
+  superSaiyan2: {
+    class: styles["super-saiyan-2"],
+    label: "Super Saiyan 2",
+    decreaseRate: 3
+  },
+  superSaiyan3: {
+    class: styles["super-saiyan-3"],
+    label: "Super Saiyan 3",
+    decreaseRate: 4
   },
 };
 
@@ -28,6 +38,24 @@ const SaiyanButton = () => {
     if (form.label === forms.superSaiyan1.label) {
       setForm(forms.base);
     }
+    if (form.label === forms.superSaiyan2.label) {
+      setForm(forms.superSaiyan1);
+    }
+    if (form.label === forms.superSaiyan3.label) {
+      setForm(forms.superSaiyan2);
+    }
+  }, [form.label]);
+
+  const transformUp = useCallback(() => {
+    if (form.label === forms.base.label) {
+      setForm(forms.superSaiyan1);
+    }
+    if (form.label === forms.superSaiyan1.label) {
+      setForm(forms.superSaiyan2);
+    }
+    if (form.label === forms.superSaiyan2.label) {
+      setForm(forms.superSaiyan3);
+    }
   }, [form.label]);
 
   const handleClick = useCallback(
@@ -38,14 +66,14 @@ const SaiyanButton = () => {
         setCounter((prev) => {
           const newValue = prev + 10;
           if (newValue >= 100) {
-            setForm(forms.superSaiyan1);
+            transformUp();
             return 0;
           }
           return newValue;
         });
       }
     },
-    [resetButton]
+    [resetButton, transformUp]
   );
 
   useEffect(() => {
@@ -68,7 +96,6 @@ const SaiyanButton = () => {
     <button
       className={cn(
         styles["saiyan-button"],
-        styles.saiyanButton,
         form.class
       )}
       onClick={handleClick}
