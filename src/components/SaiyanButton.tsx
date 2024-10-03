@@ -56,10 +56,10 @@ const SaiyanButton = () => {
   );
   const fractionalCounter = (counter / MAX_POWER) * 100;
 
-  const resetButton = useCallback(() => {
-    setCounter(0);
-    setForm(forms.base);
-  }, []);
+  // const resetButton = useCallback(() => {
+  //   setCounter(0);
+  //   setForm(forms.base);
+  // }, []);
 
   const transformDown = useCallback(() => {
     if (form.prevForm) {
