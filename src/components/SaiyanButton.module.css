@@ -1,0 +1,40 @@
+.saiyan-button {
+  width: 250px;
+  height: 50px;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-wrap: nowrap;
+}
+
+.saiyan-button:active {
+  transform: scale(0.98);
+}
+
+.base-form {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.base-form:hover {
+  background-color: #222;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.saiyan-button.super-saiyan-1 {
+  background-color: #ffffa0;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+}
+
+.saiyan-button.super-saiyan-1:hover {
+  background-color: #ffff80;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.9);
+}
